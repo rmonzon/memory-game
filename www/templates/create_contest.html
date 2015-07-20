@@ -1,0 +1,44 @@
+<ion-view view-title="Fresh Memory">
+    <ion-content class="main-page-bg">
+        <br />
+        <div class="row text-center">
+            <div class="col">
+                <span class="text-center text-white general-titles">Create contest</span>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <p class="text-error" ng-show="wrongPin">PIN number does not meet the security requirements! Read field description below.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label class="item item-input" ng-class="emptyName ? 'empty-field' : ''">
+                    <input type="text" ng-model="modelGUI.name" placeholder="Name">
+                </label>
+                <h6>Leave this field empty if you want the system to generate it randomly.</h6>
+                <label class="item item-input">
+                    <input type="number" ng-model="modelGUI.age" placeholder="Number of players">
+                </label>
+                <h6>* Number of players you want in the contest.</h6>
+                <label class="item item-input item-select">
+                    <div class="input-label">Complexity</div>
+                    <select>
+                        <option selected>Level 1 (Easy)</option>
+                        <option>Level 2 (Medium)</option>
+                        <option>Level 3 (Hard)</option>
+                    </select>
+                </label>
+                <h6>* Select the complexity you want for the contest.</h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button ng-click="registerUser()" class="button button-block button-royal">Save</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

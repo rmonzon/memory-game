@@ -1,0 +1,38 @@
+<ion-view view-title="Fresh Memory">
+    <ion-content class="main-page-bg">
+        <div class="row">
+            <div class="col col-34 text-right">
+                <img class="main-logo" src="img/brain.png" />
+            </div>
+            <div class="col col-66 text-right">
+                <p class="welcome-label">Welcome back,</p>
+                <p class="welcome-username"><b>{{userLogged.user_playerid}}</b></p>
+            </div>
+        </div>
+
+        <div class="row text-center" style="height: 70px">
+            <div class="col">
+                <span class="game-title3">FRESH MEMORY</span>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <p class="text-white" style="font-size: 15px">Ready to workout that brilliant mind?</p>
+            </div>
+        </div>
+
+        <div class="row bottom-position">
+            <div class="col">
+                <p ng-show="updateRequired">You're using an old version of this app, in order to be able to play again you need to make an <a href="https://play.google.com/store/apps/details?id=com.ionicframework.memorygame428263">update</a></p>
+                <button ng-disabled="updateRequired" ng-click="goToPage('game')" class="button button-block button-balanced icon-left ion-play">START GAME</button>
+                <!--<button ng-click="goToPage('contests')" class="button button-block button-balanced icon-left ion-android-people">CONTESTS <span class="new-announcement">New</span></button>-->
+                <button ng-click="goToPage('help')" class="button button-block button-balanced icon-left ion-help">HOW TO PLAY</button>
+                <button ng-click="goToPage('badges')" class="button button-block button-balanced icon-left ion-trophy">BADGES</button>
+                <button ng-click="goToPage('ranking')" class="button button-block button-balanced icon-left ion-podium">GLOBAL RANKING</button>
+                <button ng-click="logout()" class="button button-block button-balanced icon-left ion-power">LOG OUT</button>
+                <h6 class="text-center text-white">Copyright &copy; 2015</h6>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

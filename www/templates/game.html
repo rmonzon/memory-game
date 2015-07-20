@@ -1,0 +1,34 @@
+<ion-view view-title="Fresh Memory">
+    <ion-content class="main-page-bg">
+        <div class="item item-avatar" style="background-color: rgb(229, 127, 90)">
+            <img src="img/{{userLogged.highestBadgeImg}}">
+            <h2>{{userLogged.user_playerid}}</h2>
+            <p>Maximum score achieved: <b>{{userLogged.user_maxscore}}</b></p>
+        </div>
+        <div class="row">
+            <div class="col col-33">
+                <h5>Difficulty: </h5>
+                <h5>Level: </h5>
+            </div>
+            <div class="col col-20">
+                <h5 ng-class="difficultyColors[difficulty.id]">{{difficulty.name}}</h5>
+                <h5><b>{{level}}</b></h5>
+            </div>
+
+            <div class="col col-33">
+                <h5>Games played: </h5>
+                <h5>Score: </h5>
+            </div>
+            <div class="col col-20 text-center">
+                <h5><b>{{gamesPlayed}}</b></h5>
+                <h5><b>{{score}}</b></h5>
+            </div>
+        </div>
+        <audio id="successSound" src="sounds/chin.mp3" type="audio/mpeg" ></audio>
+        <div class="row" ng-repeat="r in rows">
+            <div ng-class="widthClass" class="col" ng-repeat="c in cols">
+                <div ng-click="onClickCell(r * boardSize.cols + $index)" ng-class="colorCells[r * boardSize.cols + $index].class" class="button dashboard-buttons panels-memory-game"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

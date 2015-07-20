@@ -1,0 +1,38 @@
+<ion-view view-title="Fresh Memory">
+    <ion-content class="main-page-bg">
+        <div class="bar bar-header item-input-inset" style="background-color: darksalmon">
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input type="search" placeholder="Search contests">
+            </label>
+            <button ng-click="goToPage('create_contest')" class="button button-royal">Create contest</button>
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <span class="text-center text-white general-titles">Contests Room</span>
+            </div>
+        </div>
+
+        <div style="height: 70%;">
+        <div class="list card" ng-repeat="c in contests">
+            <div class="item item-avatar" style="background-color: salmon; padding: 9px 0 9px 72px;">
+                <img src="img/{{contest_level[c.level - 1]}}">
+                <h2>{{c.contest_name}}</h2>
+                <p style="font-style: italic">Required num of players: <b>{{c.total_players}}</b></p>
+                <p class="text-error" style="font-style: italic">Players left: <b>{{1}}</b></p>
+            </div>
+            <a class="item item-icon-left" href="#" ng-class="c.joined ? 'text-gray' : 'light'" ng-click="joinContest(c.contest_id)" style="background-color: salmon; padding-top: 0; padding-bottom: 0;">
+                <div class="row">
+                    <div class="col col-50">
+                        <i class="icon ion-forward"></i>{{c.joined ? 'Joined!' : 'Join this contest!'}}
+                    </div>
+                    <div class="col col-50 text-right">
+                        <h3>05:00</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

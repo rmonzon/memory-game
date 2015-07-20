@@ -1,0 +1,28 @@
+<ion-view view-title="Fresh Memory">
+    <ion-content class="main-page-bg">
+        <br />
+        <div class="row text-center">
+            <div class="col">
+                <span class="text-center text-white general-titles">How to Play</span>
+            </div>
+        </div>
+
+        <ion-slide-box on-slide-changed="navSlide($index)" auto-play="false" does-continue="true">
+            <ion-slide>
+                <img style="width: 90%" src="img/help1.png">
+            </ion-slide>
+            <ion-slide>
+                <img style="width: 90%" src="img/help2.png">
+            </ion-slide>
+            <ion-slide>
+                <img style="width: 90%" src="img/help3.png">
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="row bottom-position">
+            <div class="col">
+                <button ng-click="goToPage('options')" class="button button-block button-royal">Main menu</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
