@@ -1,7 +1,7 @@
-# memory-game
-Web based game optimized for mobile devices
+# Fresh Memory game
+Remember the tile patterns, and try to reproduce them in orderly fashion, and once you advance to more complex levels you will have to deal with cells of different colors.
 
-Link in Google Play Store: https://play.google.com/store/apps/details?id=com.ionicframework.memorygame428263
+Google Play Store: https://play.google.com/store/apps/details?id=com.ionicframework.memorygame428263
 
 #Tools and technologies used
 - Front end technologies: [Ionic framework](http://ionicframework.com/). and AngularJS. 
